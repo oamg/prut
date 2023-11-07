@@ -1,0 +1,8 @@
+summary: PRUT
+discover:
+    how: fmf
+#provision:
+#  how: connect
+execute:
+    how: tmt
+    exit-first: true

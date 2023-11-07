@@ -1,0 +1,4 @@
+summary: Check distro sanity after upgrade
+duration: 15m
+tag:
+  - post-upgrade

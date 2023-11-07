@@ -1,0 +1,4 @@
+summary: Reboot the guest
+duration: 45m
+tag:
+  - upgrade
