@@ -1,5 +1,5 @@
 # Upgradability test for 3rd party applications
-Purpose of this [tmt] [test plan][tmt-plan] is to simplify upgradability testing of 3rd party apllication on RHEL.
+Purpose of this [tmt] [test plan][tmt-plan] is to simplify upgradability testing of 3rd party application on RHEL.
 
 All steps of the test plan are implemented as POSIX compliant shell scripts, therefore there are almost no dependencies
 (except `tmt`, see [Prerequisites](#prerequisites) section) to run the plan.
@@ -14,7 +14,7 @@ All steps of the test plan are implemented as POSIX compliant shell scripts, the
    ```sh
    ssh-copy-id root@${VM_IP}
    ```
-3. Installed `tmt` on the host machine (available in Fedora 37 and newer and EPEL 8 and newer, see
+3. Installed `tmt` on the host machine (available in Fedora 37 and newer and EPEL 9 and newer, see
    [installation instructions][tmt-installation])
 
 ## Running the test
@@ -32,7 +32,7 @@ tmt run \
   plans --name paths/prut
 ```
 
-The environment variables `SOURCE` and `TARGET` refers to version of RHEL installed on the mchine before and after
+The environment variables `SOURCE` and `TARGET` refers to version of RHEL installed on the machine before and after
 performing the upgrade and are used to perform sanity checks before and after the upgrade. Please note that not all
 combinations are valid, for supported upgrade paths see the [official documentation][upgrade-paths] for in-place
 upgrades.
@@ -84,8 +84,8 @@ tmt tests ls --filter 'tag: pre-upgrade'
 
 <!-- links -->
 [tmt]: https://tmt.readthedocs.io/
-[tmt-plan]: https://tmt.readthedocs.io/en/stable/spec/plans.html
-[tmt-test]: https://tmt.readthedocs.io/en/latest/spec/tests.html
-[tmt-installation]: https://tmt.readthedocs.io/en/latest/overview.html#install
+[tmt-plan]: https://tmt.readthedocs.io/en/stable/guide.html#plans
+[tmt-test]: https://tmt.readthedocs.io/en/stable/guide.html#tests
+[tmt-installation]: https://tmt.readthedocs.io/en/stable/overview.html#install
 [upgrade-paths]: https://access.redhat.com/articles/4263361
 [dev-sub]: https://developers.redhat.com/articles/getting-red-hat-developer-subscription-what-rhel-users-need-know
